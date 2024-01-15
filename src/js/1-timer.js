@@ -6,7 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 let userSelectedDate;
 
 const startButton = document.querySelector("[data-start]");
-
+const input = document.getElementById("datetime-picker");
 const options = {
 	enableTime: true,
 	time_24hr: true,
@@ -31,9 +31,6 @@ function validateSelectedDate() {
 		startButton.disabled = true;
 	} else {
 		startButton.disabled = false;
-	}
-	if (input.value) {
-		startButton.disabled = true;
 	}
 }
 
