@@ -12,9 +12,6 @@ const options = {
 	time_24hr: true,
 	defaultDate: new Date(),
 	minuteIncrement: 1,
-	onOpen(selectedDates, dateStr, instance) {
-		instance.clear();
-	},
 	onClose(selectedDates) {
 		userSelectedDate = selectedDates[0];
 		validateSelectedDate();
@@ -40,7 +37,7 @@ function startTimer() {
 		const currentDateTime = new Date();
 		const timeDifference = userSelectedDate - currentDateTime;
 		startButton.disabled = true;
-
+		input.disabled = true;
 		if (timeDifference <= 0) {
 			clearInterval(timerInterval);
 			return;
