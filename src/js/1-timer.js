@@ -18,6 +18,7 @@ const options = {
 	},
 };
 const datePicker = flatpickr("#datetime-picker", options);
+
 function validateSelectedDate() {
 	const currentDate = new Date();
 	if (userSelectedDate <= currentDate) {
