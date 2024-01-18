@@ -6,7 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 let userSelectedDate;
 
 const startButton = document.querySelector("[data-start]");
-const input = document.getElementById("datetime-picker");
+const input = document.querySelector("#datetime-picker");
 const options = {
 	enableTime: true,
 	time_24hr: true,
@@ -17,7 +17,7 @@ const options = {
 		validateSelectedDate();
 	},
 };
-const datePicker = flatpickr("#datetime-picker", options);
+const datePicker = flatpickr(input, options);
 
 function validateSelectedDate() {
 	const currentDate = new Date();
